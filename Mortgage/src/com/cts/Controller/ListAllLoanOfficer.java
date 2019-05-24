@@ -38,24 +38,10 @@ public class ListAllLoanOfficer extends HttpServlet {
 		
 List customer= null;
 
-//for(Customer c:clist)
-//{
-//	customer.add(c.getCustomerId());
-//	customer.add(c.getName());
-//	customer.add(c.getEmailId());
-//	customer.add(c.getMobileNumber());
-//	customer.add(c.getDob());
-//	customer.add(c.getCity());
-//	customer.add(c.getState());
-//	 
-//}
-//
-//System.out.println("data"+customer);
-
-
 request.setAttribute("customer", clist);
 RequestDispatcher rd = request.getRequestDispatcher("AllApplicants.jsp");
 rd.forward(request, response);
+
 
 		
 	}

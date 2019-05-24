@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -56,10 +57,12 @@ public class RegistrationServlet extends HttpServlet {
 	System.out.println(city);
 	System.out.println(state);
 	*/
+	String r;
+	int res=0;
+	
 	try {
 		s=con.prepareStatement("insert into customers(customer_name,emailId,mobileNumber,dateOfBirth,password,city,state) values(?,?,?,?,?,?,?)");
-		
-		
+				
 		s.setString(1, name);
 		s.setString(2, emailId);
 		s.setString(3, mobileNumber);
@@ -69,17 +72,9 @@ public class RegistrationServlet extends HttpServlet {
 		s.setString(7,state);
 		
 		
-		int res = s.executeUpdate();
-		String r;
+		res = s.executeUpdate();
 		
 		
-		if(res != 0 )
-		{
-			r = "Registration is succesfull";
-		}
-		else
-			r = "Registration is not succesfull";
-		pw.write(r);
 		
 		
 		
@@ -89,6 +84,28 @@ public class RegistrationServlet extends HttpServlet {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
+	
+	
+	if(res != 0 )
+	{
+		RequestDispatcher rd = request.getRequestDispatcher("login.html");
+		rd.forward(request, response);
+	}
+	else
+	{
+		RequestDispatcher rd = request.getRequestDispatcher("Registration.html");
+		rd.forward(request, response);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 	
 	
