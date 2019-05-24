@@ -46,9 +46,9 @@
     </ul>
   </div>
 </nav>
-<MARQUEE STYLE="COLOR:red">
-		<H1> WELCOME TO SANTANDER BANK
-		</H1>
+<MARQUEE behavior="alternate" direction="left">
+		  
+    <img src="santander_logo.png" width="160" height="90" alt="Natural" />
 		</MARQUEE>
 
   

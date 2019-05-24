@@ -3,7 +3,7 @@ package com.cts.model;
 import java.util.Date;
 
 public class Customer {
-
+	private int customerId;
 	private String name;
 	private String emailId;
 	private String mobileNumber;
@@ -13,6 +13,12 @@ public class Customer {
 	private String city;
 	private String state;
 	
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 	public String getName() {
 		return name;
 	}
@@ -57,9 +63,11 @@ public class Customer {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public Customer(String name, String emailId, String mobileNumber, Date dob, String pswd,
+	
+	public Customer(int customerId, String name, String emailId, String mobileNumber, Date dob, String pswd,
 			String city, String state) {
 		super();
+		this.customerId = customerId;
 		this.name = name;
 		this.emailId = emailId;
 		this.mobileNumber = mobileNumber;
@@ -71,6 +79,11 @@ public class Customer {
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", name=" + name + ", emailId=" + emailId + ", mobileNumber="
+				+ mobileNumber + ", dob=" + dob + ", pswd=" + pswd + ", city=" + city + ", state=" + state + "]";
 	}
 	
 	

@@ -1,5 +1,6 @@
 package com.cts.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.cts.dao.CustomerDao;
@@ -14,24 +15,16 @@ public class CustomerServiceImpl implements CustomerService{
 		customerDAO =new CustomerDaoImpl();
 		
 	}
-	@Override
-	public boolean delCustomer(String name, String email) {
-		// TODO Auto-generated method stub
-		boolean a = customerDAO.deleteCustomer(name,email);
-		return a;
-	}
 	
-	@Override
-	public Customer listCustomer(String name, String email) {
-		// TODO Auto-generated method stub
-		Customer b=customerDAO.listCustomer(name, email);
-		return b;
-	}
 	@Override
 	public List<Customer> listAll() {
 		// TODO Auto-generated method stub
-		List<Customer> clist = customerDAO.listAllCustomer(); 
-		return null;
+		List<Customer> cList = new ArrayList<>();
+		if(customerDAO.listAllCustomer() != null)
+		{
+			cList = customerDAO.listAllCustomer();
+		}
+		return cList;
 	}
 
 	
