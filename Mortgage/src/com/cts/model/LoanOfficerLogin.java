@@ -1,5 +1,5 @@
 package com.cts.model;
-public class AdminLogin {
+public class LoanOfficerLogin {
 	private String email;
 	private String password;
 	public String getEmail() {
@@ -14,11 +14,11 @@ public class AdminLogin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public AdminLogin() {
+	public LoanOfficerLogin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public AdminLogin(String email, String password) {
+	public LoanOfficerLogin(String email, String password) {
 		super();
 		 this.email= email;
 		this.password = password;

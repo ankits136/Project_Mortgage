@@ -66,18 +66,8 @@ public class EmployeeRegistrationServlet extends HttpServlet {
 	String emailId =request.getParameter("email");
 	String password  = request.getParameter("pwd");
 	
-	//Date dob = sdf.parse(dateOfBirth);
-	
-	/*System.out.println(name);
-	System.out.println(emailId);
-	System.out.println(mobileNumber);
-	System.out.println(dateOfBirth);
-	System.out.println(password);
-	System.out.println(city);
-	System.out.println(state);
-	*/
 	try {
-		s=con.prepareStatement("insert into Employee_reg(employee_name,employee_designation,emailId,password) values(?,?,?,?)");
+		s=con.prepareStatement("insert into employee_reg(employee_name,employee_designation,emailid,password) values(?,?,?,?)");
 		
 		
 		s.setString(1, empname);

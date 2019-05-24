@@ -13,13 +13,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.cts.dao.Validation;
+import com.cts.model.LoanOfficerLogin;
 import com.cts.model.CustomerLogin;
 
-
-@WebServlet("/CustomerLoginServlet")
-public class CustomerLoginServlet extends HttpServlet {
+/**
+ * Servlet implementation class LoanOfficerLoginServlet
+ */
+@WebServlet("/LoanOfficerLoginServlet")
+public class LoanOfficerLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Connection con = null;
 	PreparedStatement s = null;
@@ -34,21 +36,21 @@ public class CustomerLoginServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter pw = response.getWriter();
-		CustomerLogin cl = new CustomerLogin();
+		LoanOfficerLogin al = new LoanOfficerLogin();
 		String email = request.getParameter("name");
 		String password = request.getParameter("pass");
 		
 		
 		
-		if(Validation.checkUser(email, password))
+		if(Validation.checkEmployee(email, password))
 		{
-			RequestDispatcher  rs = request.getRequestDispatcher("Registration.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("EmployeeRegistration.html");
 			rs.forward( request,response);
 		}
 		else
 		{
 			System.out.println("Username or password is incorrect");
-			RequestDispatcher  rs = request.getRequestDispatcher("login.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("loanofficerlogin.html");
 			rs.forward( request,response);
 			
 		}
@@ -59,3 +61,4 @@ public class CustomerLoginServlet extends HttpServlet {
 	}
 
 }
+

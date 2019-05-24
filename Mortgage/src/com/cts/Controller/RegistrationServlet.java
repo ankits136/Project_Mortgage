@@ -38,7 +38,6 @@ public class RegistrationServlet extends HttpServlet {
 	PrintWriter pw = response.getWriter();
 	SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 	sdf.setLenient(false);
-	Customer c = new Customer();
 	String name = request.getParameter("name");
 	String emailId =request.getParameter("email");
 	String mobileNumber = request.getParameter("number");
