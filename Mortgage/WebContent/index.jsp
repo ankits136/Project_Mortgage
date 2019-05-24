@@ -27,7 +27,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="active"><a href="">About Us</a></li>
+      <li class="active"><a href="Aboutus.html">About Us</a></li>
       <li class="active"><a href="FAQ.html">FAQ</a></li>
       <li class="active"><a href="contactus.html">Contact Us</a></li>
    

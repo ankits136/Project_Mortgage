@@ -91,6 +91,7 @@ public class RegistrationServlet extends HttpServlet {
 	{
 		RequestDispatcher rd = request.getRequestDispatcher("login.html");
 		rd.forward(request, response);
+		//pw.println("registration successfull");
 	}
 	else
 	{
