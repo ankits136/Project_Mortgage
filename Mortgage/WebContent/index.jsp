@@ -30,7 +30,7 @@
       <li class="active"><a href="Aboutus.html">About Us</a></li>
       <li class="active"><a href="FAQ.html">FAQ</a></li>
       <li class="active"><a href="contactus.html">Contact Us</a></li>
-   
+      <li class="active"><a href="Emi.html">EMI</a></li>   
     <ul class="nav navbar-nav navbar-right">
       <li><a href="Registration.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       

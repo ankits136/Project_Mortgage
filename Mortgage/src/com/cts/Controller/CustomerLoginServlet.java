@@ -42,7 +42,7 @@ public class CustomerLoginServlet extends HttpServlet {
 		
 		if(Validation.checkUser(email, password))
 		{
-			RequestDispatcher  rs = request.getRequestDispatcher("Registration.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("applyLoan.html");
 			rs.forward( request,response);
 		}
 		else

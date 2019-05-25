@@ -49,7 +49,7 @@ public class LoanOfficerLoginServlet extends HttpServlet {
 		}
 		else
 		{
-			System.out.println("Username or password is incorrect");
+			//System.out.println("Username or password is incorrect");
 			RequestDispatcher  rs = request.getRequestDispatcher("loanofficerlogin.html");
 			rs.forward( request,response);
 			
