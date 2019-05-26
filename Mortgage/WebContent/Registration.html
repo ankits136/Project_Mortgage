@@ -7,20 +7,27 @@
 </head>
 <body>
 
-  <marquee behavior="alternate" direction="left">
-    <img src="image.png" width="120" height="80" alt="Natural" />
-  </marquee>
-<h2 align ="left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegistration page</h2>
+	<marquee behavior="alternate" direction="left">
+		<img src="image.png" width="120" height="80" alt="Natural" />
+  	</marquee>
+
+	<h2 align="left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegistration page</h2>
 <form action="RegistrationServlet" method="post">
 <pre>
 
-<b>&nbsp&nbsp&nbspName  </b> 		 : <input type="text" placeholder="Enter your name" name="name" required><br><br>
-<b>&nbsp&nbsp&nbspEmail-Id	</b> 	 : <input type="email" placeholder="Enter your email Id" name="email" required><br><br>
-<b>&nbsp&nbsp&nbspMobile Number</b>  	 : <input type="text" placeholder="Enter your mobile number" name="number" Maxlength=10 required><br><br>
+<b>&nbsp&nbsp&nbspName  </b> 		 : <input type="text" placeholder="Enter your name" name="name" 	oninvalid="alert('Name must contain 20 characters'); name="name" pattern="[a-zA-Z]*"  required><br><br>
+
+<b>&nbsp&nbsp&nbspEmail-Id	</b> 	 : <input type="email" placeholder="Enter your email Id" name="email" oninvalid="alert('Email Id must contain 12 characters'); name="email" pattern="[a-zA-Z0-9._@#&-]*"  required><br><br>
+
+<b>&nbsp&nbsp&nbspMobile Number</b>  	 : <input type="text" placeholder="Enter your mobile number" name="number"  pattern="[0-9]{10}" Maxlength=10 required><br><br>
+
 <b>&nbsp&nbsp&nbspDate Of Birth </b> 	 : <input type="date" placeholder="Enter your date of birth" name="dob" required><br><br>
-<b>&nbsp&nbsp&nbspPassword	</b> 	 : <input type="password" placeholder="Enter your password" name="pwd" required><br><br>
-<b>&nbsp&nbsp&nbspCity     </b>   		 : <input type = "text" placeholder ="Enter your city" name = "city" required><br><br>
-<b>&nbsp&nbsp&nbspState   </b>    	 	 : <input type = "text" placeholder ="Enter your State" name = "state" required><br><br>
+
+<b>&nbsp&nbsp&nbspPassword	</b> 	 : <input type="password" placeholder="Enter your password" name="pwd" pattern="[A-Za-z0-9]{8}" maxlength="20" required><br><br>
+
+<b>&nbsp&nbsp&nbspCity     </b>   		 : <input type = "text" placeholder ="Enter your city" name = "city" pattern="[A-Za-z]*" required><br><br>
+
+<b>&nbsp&nbsp&nbspState   </b>    	 	 : <input type = "text" placeholder ="Enter your State" name = "state" pattern="[A-Za-z]*" required><br><br>
 
 <input type="submit" value="Register" >
 

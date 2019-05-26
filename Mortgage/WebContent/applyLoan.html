@@ -4,25 +4,24 @@
 <body background="resize4.jpg">
 
 <h1 style="text-align:center">APPLY FOR MORTAGAGE LOAN</h1>
+
 <form>
-<h3 style="text-align:center">emailId <input type="email" name="" value="enter email"><br><br></h3>
-<h3 style="text-align:center">PAN Card Number: <input type="text" name="" value="enter pan number"><br>
-<input type="file" id="File1"><br><br></h3>
-<h3 style="text-align:center">Passport Number:<input type="text" name="" value="enter passport number"><br>
-<input type="file" id="File2"><br><br></h3>
-<h3 style="text-align:center">Property Value: <input type="text" name="" value="Enter the value"><br><br><br>
-<input type="submit" value="Submit"></h3>
-<script>
-function myFunction() {
-  var x = document.getElementById("File1");
-  x.disabled = true;
-function myFunction() {
-  var x = document.getElementById("File2");
-  x.disabled = true;
+<h3 style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email Id &nbsp;&nbsp;: &nbsp;&nbsp;<input type="email" name="email" placeholder="enter email" oninvalid="alert('Email Id must contain 12 characters'); name=" email"="" pattern="[a-zA-Z0-9._@#&amp;-]*" required=""><br></h3>
 
-</script>
+
+<h3 style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp; Loan amount &nbsp;&nbsp; : &nbsp;&nbsp; <input type="text" name="loanamount" placeholder="enter loan value" pattern="[0-9]{6}" required=""><br></h3>
+
+<h3 style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp; PAN Number &nbsp;&nbsp; : &nbsp;&nbsp; <input type="text" name="pan" placeholder="enter pan number" oninvalid="alert('PAN no must contain 10 digits'); name=" pnum"="" pattern="[A-Z0-9]{10}" maxlength="10" required=""><br>
+
+</h3><h3 style="text-align:center">Aadhar Number &nbsp;&nbsp; : &nbsp;&nbsp;<input type="text" name="aadhar" placeholder="enter passport number" oninvalid="alert('Adhar no must contain 12 digits'); name=" anum"="" pattern="[0-9]{12}" maxlength="12" required=""><br>
+
+</h3><h3 style="text-align:center">&nbsp;&nbsp; Property Value &nbsp;&nbsp; : &nbsp;&nbsp; <input type="text" name="property" placeholder="enter the value" pattern="[0-9]{6}" required=""><br><br><br>
+
+
+<input type="submit" name=" " value="Submit">
 
 
 
+ </h3></form>
 </body>
 </html> 

@@ -28,11 +28,11 @@ public class LonaInspectorServlet extends HttpServlet {
 		con=DBUtil.getConnection();
 	}
 
-	
+
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter pw = response.getWriter();
-		LonaInspectorServlet loanInspec = new LonaInspectorServlet();
+		LoanOfficerLogin al = new LoanOfficerLogin();
 		String email = request.getParameter("name");
 		String password = request.getParameter("pass");
 		
@@ -40,16 +40,21 @@ public class LonaInspectorServlet extends HttpServlet {
 		
 		if(Validation.checkEmployee(email, password))
 		{
-			RequestDispatcher  rs = request.getRequestDispatcher("EmployeeRegistration.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("loanOfficerAfterLogin.html");
 			rs.forward( request,response);
 		}
 		else
 		{
-			System.out.println("Username or password is incorrect");
-			RequestDispatcher  rs = request.getRequestDispatcher("loanInspector.html");
+			//System.out.println("Username or password is incorrect");
+			RequestDispatcher  rs = request.getRequestDispatcher("loanofficerlogin.html");
 			rs.forward( request,response);
 			
 		}
+			
+		
+		
+		
 	}
 
 }
+
