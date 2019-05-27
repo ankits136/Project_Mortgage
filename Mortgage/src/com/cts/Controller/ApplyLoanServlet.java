@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cts.dao.loanValidation;
 import com.cts.model.CustomerLogin;
 import com.cts.model.applyloan;
 
@@ -58,8 +60,15 @@ public class ApplyLoanServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		if(res !=0)
 		{
+			List<applyloan> alist = loanValidation.checkloanAmount(loanamount, propertyvalue);
+			{
+				for(applyloan a:alist)
+					System.out.println(a);
+				
+			}
 			RequestDispatcher rd = request.getRequestDispatcher("applicationsubmitted.html");
 			rd.forward(request, response);
 		}

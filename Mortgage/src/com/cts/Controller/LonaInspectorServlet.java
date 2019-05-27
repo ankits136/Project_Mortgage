@@ -40,7 +40,7 @@ public class LonaInspectorServlet extends HttpServlet {
 		
 		if(Validation.checkEmployee(email, password))
 		{
-			RequestDispatcher  rs = request.getRequestDispatcher("loanOfficerAfterLogin.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("loaninspectorafter.html");
 			rs.forward( request,response);
 		}
 		else

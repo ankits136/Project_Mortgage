@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style type="text/css">
   body  {
-  background-image: url("IMG.jpg");
+  background-image: url("santanUk.jpg");
  
 }
 
@@ -26,7 +26,7 @@
       <a class="navbar-brand"  >Santander Bank</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+    <li class="active"><a href="index.jsp">Home</a></li>
       <li class="active"><a href="Aboutus.html">About Us</a></li>
       <li class="active"><a href="FAQ.html">FAQ</a></li>
       <li class="active"><a href="contactus.html">Contact Us</a></li>

@@ -38,7 +38,7 @@ public class LoanAuthorizerServlet extends HttpServlet {
 		
 		if(Validation.checkEmployee(email, password))
 		{
-			RequestDispatcher  rs = request.getRequestDispatcher("EmployeeRegistration.html");
+			RequestDispatcher  rs = request.getRequestDispatcher("loanauthorizerafter.html");
 			rs.forward( request,response);
 		}
 		else
