@@ -5,17 +5,20 @@
 
 <h1 style="text-align:center">APPLY FOR MORTAGAGE LOAN</h1>
 <form action = "ApplyLoanServlet" method = "post">
-<h3 style="text-align:center">EMAILID <input type="email" name="email" ><br><br></h3>
+<h3 style="text-align:center">EMAILID <input type="email" name="email" placeholder="Enter Email" oninvalid="alert('Email id must contain 12 character');" 
+pattern=".{3,}" required> <br><br></h3>
 
-<h3 style="text-align:center">loan amount <input type="number" name="loanamount" ><br><br></h3>
-<h3 style="text-align:center">PAN Card Number: <input type="text" name="pan" ><br>
+<h3 style="text-align:center">loan amount <input type="text" name="loanamount" placeholder="Enter Loan amount" oninvalid="alert('loan amount must be of 6 digit');"
+ pattern="[0-9]{6}" required> <br><br></h3>
+<h3 style="text-align:center">PAN Card Number: <input type="text" name="pan" placeholder="Enter Pan no" oninvalid="alert('pan no must be of 10 digit');"
+ pattern="[a-zA-Z0-9]{10}" required><br>
 
-<h3 style="text-align:center">Aadhar Number:<input type="number" name="aadhar"><br>
+<h3 style="text-align:center">Aadhar Number:<input type="text" name="aadhar" placeholder="Enter Aadhaar No" oninvalid="alert('Aadhaar no must be of 12 digit');" 
+pattern="[0-9]{12}" maxlength="12" required><br>
 
-<h3 style="text-align:center">Property Value: <input type="number" name="property"><br><br><br>
+<h3 style="text-align:center">Property Value: <input type="text" name="property" placeholder="Enter property value" oninvalid="alert('property value must be of 6 digit');"
+ pattern="[0-9]{6}" required><br><br><br>
 <input type="submit" value="Submit"></h3>
-
-
 
 </body>
 </html>
