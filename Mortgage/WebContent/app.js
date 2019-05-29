@@ -31,11 +31,11 @@ function computeResults(e) {
 
   //Show results
 
-  document.getElementById("monthlyPayment").innerHTML = "$" + monthlyPayment;
+  document.getElementById("monthlyPayment").innerHTML = "£" + monthlyPayment;
 
   document.getElementById("totalInterest").innerHTML = "%" + totalInterest;
 
-  document.getElementById("totalPayment").innerHTML = "$" + totalPayment;
+  document.getElementById("totalPayment").innerHTML = "£" + totalPayment;
 
   e.preventDefault();
 }
